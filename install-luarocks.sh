@@ -11,18 +11,19 @@ sudo yum -y update
 sudo yum -y install gcc make readline-devel unzip
 
 # downloading, extracting and compiling luarocks.
-curl -J -L https://luarocks.org/releases/luarocks-3.1.3.tar.gz -o $HOME/luarocks.tar.gz && \
-tar -xzf $HOME/luarocks.tar.gz -C $HOME                                                 && \
-rm  -rf  $HOME/luarocks.tar.gz                                                          && \
-mv       $HOME/luarocks-* $HOME/luarocks                                                && \
-cd       $HOME/luarocks                                                                 && \
-./configure --prefix="$HOME/luarocks"                                                      \
-            --lua-version="5.1"                                                            \
-            --with-lua-bin="$HOME/lua/bin"                                                 \
-            --with-lua-include="$HOME/lua/include"                                         \
-            --with-lua-lib="$HOME/lua/lib"                                                 \
-            --with-lua-interpreter="lua"                                                && \
-make build install bootstrap                                                            && \
-export PATH=$PATH:$HOME/luarocks/bin                                                    && \
-echo "export PATH=$PATH:$HOME/luarocks/bin" >> $HOME/.bashrc                            && \
+curl -J -L https://luarocks.org/releases/luarocks-3.1.3.tar.gz -o $HOME/luarocks.tar.gz          && \
+tar -xzf $HOME/luarocks.tar.gz -C $HOME                                                          && \
+rm  -rf  $HOME/luarocks.tar.gz                                                                   && \
+mv       $HOME/luarocks-* $HOME/luarocks                                                         && \
+cd       $HOME/luarocks                                                                          && \
+./configure --prefix="$HOME/luarocks"                                                               \
+            --lua-version="5.1"                                                                     \
+            --with-lua-bin="$HOME/lua/bin"                                                          \
+            --with-lua-include="$HOME/lua/include"                                                  \
+            --with-lua-lib="$HOME/lua/lib"                                                          \
+            --with-lua-interpreter="lua"                                                         && \
+make build install bootstrap                                                                     && \
+rm  -rf  $HOME/luarocks/{CHANGELOG.md,CODE_OF_CONDUCT.md,COPYING,README.md,GNUmakefile,Makefile} && \
+export PATH=$PATH:$HOME/luarocks/bin                                                             && \
+echo "export PATH=$PATH:$HOME/luarocks/bin" >> $HOME/.bashrc                                     && \
 luarocks path >> $HOME/.bashrc
