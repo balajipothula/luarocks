@@ -21,22 +21,3 @@ make linux install                                                              
 rm -rf   $HOME/lua/{doc,man,test,COPYRIGHT,HISTORY,INSTALL,README,Makefile}         && \
 echo "export PATH=$PATH:$HOME/lua/bin" >> $HOME/.bashrc                             && \
 exec $BASH
-
-# downloading, extracting and compiling luarocks.
-curl -J -L https://luarocks.org/releases/luarocks-3.1.3.tar.gz -o $HOME/luarocks.tar.gz          && \
-tar -xzf $HOME/luarocks.tar.gz -C $HOME                                                          && \
-rm  -rf  $HOME/luarocks.tar.gz                                                                   && \
-mv       $HOME/luarocks-* $HOME/luarocks                                                         && \
-cd       $HOME/luarocks                                                                          && \
-./configure --prefix="$HOME/luarocks"                                                               \
-            --lua-version="5.1"                                                                     \
-            --with-lua-bin="$HOME/lua/bin"                                                          \
-            --with-lua-include="$HOME/lua/include"                                                  \
-            --with-lua-lib="$HOME/lua/lib"                                                          \
-            --with-lua-interpreter="lua"                                                         && \
-make build install                                                                               && \
-rm  -rf  $HOME/luarocks/{CHANGELOG.md,CODE_OF_CONDUCT.md,COPYING,README.md,GNUmakefile,Makefile} && \
-echo "export PATH=$PATH:$HOME/luarocks/bin" >> $HOME/.bashrc                                     && \
-exec $BASH                                                                                       && \
-luarocks path >> $HOME/.bashrc                                                                   && \
-exec $BASH
