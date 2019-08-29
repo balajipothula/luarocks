@@ -19,11 +19,5 @@ cd       $HOME/lua                                                              
 sed -i 's/INSTALL_TOP\= \/usr\/local/INSTALL_TOP= ${HOME}\/lua/' $HOME/lua/Makefile && \
 make linux install                                                                  && \
 rm -rf   $HOME/lua/{doc,man,test,COPYRIGHT,HISTORY,INSTALL,README,Makefile}         && \
-echo "export PATH=$PATH:$HOME/lua/bin" >> $HOME/.bashrc
-
-# reloading .bashrc without logging out.
-# source $HOME/.bashrc
-
-# replacing current shell with a new instance
-# and re-loading shell path variable.
+echo "export PATH=$PATH:$HOME/lua/bin" >> $HOME/.bashrc                             && \
 exec $BASH
