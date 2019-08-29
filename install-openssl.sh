@@ -8,7 +8,7 @@
 sudo yum -y update
 
 # installing build essentials.
-sudo yum -y install gcc make perl readline-devel zlib
+sudo yum -y install gcc make perl readline-devel zlib zlib-devel
 
 # downloading, extracting and compiling openssl.
 curl -J -L https://www.openssl.org/source/openssl-1.0.2s.tar.gz -o $HOME/openssl.tar.gz && \
