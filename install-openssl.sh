@@ -17,4 +17,8 @@ rm  -rf  $HOME/openssl.tar.gz                                                   
 mv       $HOME/openssl-* $HOME/OpenSSL                                                  && \
 cd       $HOME/OpenSSL                                                                  && \
 ./config --prefix=$HOME/openssl --openssldir=$HOME/openssl shared zlib                  && \
-make install
+make install                                                                            && \
+cd       $HOME                                                                          && \
+rm  -rf  $HOME/OpenSSL                                                                  && \
+echo "export PATH=$PATH:$HOME/openssl/bin" >> $HOME/.bashrc                             && \
+exec $BASH
