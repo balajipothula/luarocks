@@ -24,6 +24,6 @@ cd       $HOME/luarocks                                                         
             --with-lua-interpreter="lua"                                                         && \
 make build install                                                                               && \
 rm  -rf  $HOME/luarocks/{CHANGELOG.md,CODE_OF_CONDUCT.md,COPYING,README.md,GNUmakefile,Makefile} && \
-export PATH=$PATH:$HOME/luarocks/bin                                                             && \
 echo "export PATH=$PATH:$HOME/luarocks/bin" >> $HOME/.bashrc                                     && \
+exec $BASH                                                                                       && \
 luarocks path >> $HOME/.bashrc
