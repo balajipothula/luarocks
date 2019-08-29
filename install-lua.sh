@@ -16,7 +16,7 @@ tar -xzf $HOME/lua.tar.gz -C $HOME                                              
 rm  -rf  $HOME/lua.tar.gz                                                           && \
 mv       $HOME/lua-* $HOME/lua                                                      && \
 cd       $HOME/lua                                                                  && \
-sed -i 's/INSTALL_TOP\= \/usr\/local/INSTALL_TOP= ${HOME}\/lua/' $HOME/lua/Makefile && \
+sed -i 's/INSTALL_TOP= \/usr\/local/INSTALL_TOP= ${HOME}\/lua/' $HOME/lua/Makefile  && \
 make linux install                                                                  && \
 rm -rf   $HOME/lua/{doc,man,test,COPYRIGHT,HISTORY,INSTALL,README,Makefile}         && \
 echo "export PATH=$PATH:$HOME/lua/bin" >> $HOME/.bashrc                             && \
