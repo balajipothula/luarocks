@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Author      : BALAJI POTHULA <balaji.pothula@techie.com>,
-# Date        : 12 August 2019,
+# Date        : 29 August 2019,
 # Description : Installing / Compiling OpenSSL from Source Code.
 
 # update package repositories.
 sudo yum -y update
 
 # installing build essentials.
-sudo yum -y install gcc git make readline-devel zlib
+sudo yum -y install gcc make readline-devel zlib
 
 # downloading, extracting and compiling openssl.
 curl -J -L https://www.openssl.org/source/openssl-1.0.2s.tar.gz -o $HOME/openssl.tar.gz && \
