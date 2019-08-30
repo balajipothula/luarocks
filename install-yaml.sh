@@ -11,10 +11,11 @@ sudo yum -y update
 sudo yum -y install gcc make perl readline-devel zlib zlib-devel
 
 # downloading, extracting and compiling openssl.
-curl -J -L https://www.openssl.org/source/openssl-1.0.2s.tar.gz -o $HOME/openssl.tar.gz && \
-tar -xzf $HOME/openssl.tar.gz -C $HOME                                                  && \
-rm  -rf  $HOME/openssl.tar.gz                                                           && \
-mv       $HOME/openssl-* $HOME/OpenSSL                                                  && \
-cd       $HOME/OpenSSL                                                                  && \
-./config --prefix=$HOME/openssl --openssldir=$HOME/openssl shared zlib                  && \
+curl -JL http://pyyaml.org/download/libyaml/yaml-0.2.2.tar.gz -o $HOME/yaml.tar.gz && \
+tar -xzf $HOME/yaml.tar.gz -C $HOME                                                && \
+rm  -rf  $HOME/yaml.tar.gz                                                         && \
+mv       $HOME/yaml-* $HOME/YAML                                                   && \
+mkdir -p $HOME/yaml                                                                && \
+cd       $HOME/YAML                                                                && \
+./configure --prefix=$HOME/yaml                                                    && \
 make install
