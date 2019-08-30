@@ -8,7 +8,7 @@
 sudo yum -y update
 
 # installing build essentials.
-sudo yum -y install gcc git make readline-devel unixODBC-devel unzip
+sudo yum -y install gcc git libyaml make openssl-devel readline-devel unixODBC-devel unzip
 
 # downloading, extracting and compiling luarocks.
 curl -J -L https://luarocks.org/releases/luarocks-3.1.3.tar.gz -o $HOME/luarocks.tar.gz && \
