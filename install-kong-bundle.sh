@@ -1,4 +1,8 @@
+#!/bin/bash
 
+# Author      : BALAJI POTHULA <balaji.pothula@techie.com>,
+# Date        : 30 August 2019,
+# Description : Installing Kong Dependency Bundles into luarocks folder.
 
 # installing external plugins.
 luarocks install inspect 3.1.1
