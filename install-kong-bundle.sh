@@ -15,7 +15,7 @@ luarocks install pgmoon 1.10.0
 luarocks install luatz 0.4
 luarocks install http 0.3
 luarocks install lua_system_constants 0.1.3
-luarocks install lyaml 6.0-1 # 6.2.3-1 Error: Build error: Failed building.
+luarocks install lyaml 6.0-1 YAML_DIR=$HOME/yaml # 6.2.3-1 Error: Build error: Failed building.
 luarocks install lua-resty-iputils 0.3.0
 luarocks install luaossl 20181207
 luarocks install luasyslog 1.0.0
