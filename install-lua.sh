@@ -18,7 +18,7 @@ mv       $HOME/lua-* $HOME/lua                                                  
 cd       $HOME/lua                                                                  && \
 sed -i 's/INSTALL_TOP= \/usr\/local/INSTALL_TOP= ${HOME}\/lua/' $HOME/lua/Makefile  && \
 make linux install                                                                  && \
-cd       $HOME/                                                                     && \
+cd       $HOME                                                                      && \
 rm -rf   $HOME/lua/{doc,man,test,COPYRIGHT,HISTORY,INSTALL,README,Makefile}         && \
 echo "export PATH=$PATH:$HOME/lua/bin" >> $HOME/.bashrc                             && \
 exec $BASH
