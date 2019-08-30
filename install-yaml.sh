@@ -18,4 +18,6 @@ mv       $HOME/yaml-* $HOME/YAML                                                
 mkdir -p $HOME/yaml                                                                && \
 cd       $HOME/YAML                                                                && \
 ./configure --prefix=$HOME/yaml                                                    && \
-make install
+make install                                                                       && \
+cd       $HOME                                                                     && \
+rm  -rf  $HOME/YAML
