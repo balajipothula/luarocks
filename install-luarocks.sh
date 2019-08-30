@@ -23,6 +23,7 @@ cd       $HOME/luarocks                                                         
             --with-lua-lib="$HOME/lua/lib"                                                 \
             --with-lua-interpreter="lua"                                                && \
 make build install                                                                      && \
+cd       $HOME                                                                          && \
 echo "export PATH=$PATH:$HOME/luarocks/bin" >> $HOME/.bashrc                            && \
 exec $BASH                                                                              && \
 luarocks path >> $HOME/.bashrc                                                          && \
