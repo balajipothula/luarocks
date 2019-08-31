@@ -1,4 +1,4 @@
-# kong dependency bundles installation on rhel8 machine.
+## kong dependency bundles installation on rhel8 machine.
 
 step-01: ./install-lua.sh  
 step-02: ./install-luarocks.sh  
