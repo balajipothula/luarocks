@@ -4,3 +4,4 @@ step-01: ./install-lua.sh
 step-02: ./install-luarocks.sh  
 step-03: ./install-openssl.sh  
 step-04: ./install-yaml.sh  
+setp-05: ./install-kong-dependency-bundles.sh  
