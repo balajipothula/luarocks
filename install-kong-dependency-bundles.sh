@@ -5,9 +5,9 @@
 # Description : Installing Kong Dependency Bundles into luarocks folder.
 
 # installing external plugins.
+luarocks install luasocket 3.0-rc1
 luarocks install luasec 0.8 OPENSSL_DIR=$HOME/openssl
 luarocks install inspect 3.1.1
-luarocks install luasocket 3.0-rc1
 luarocks install penlight 1.5.4
 luarocks install lua-resty-http 0.13
 luarocks install lua-resty-jit-uuid 0.0.7
