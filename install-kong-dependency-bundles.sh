@@ -5,8 +5,8 @@
 # Description : Installing Kong Dependency Bundles into luarocks folder.
 
 # installing external plugins.
+luarocks install luasec 0.8 OPENSSL_DIR=$HOME/openssl
 luarocks install inspect 3.1.1
-luarocks install luasec 0.8
 luarocks install luasocket 3.0-rc1
 luarocks install penlight 1.5.4
 luarocks install lua-resty-http 0.13
@@ -21,7 +21,7 @@ luarocks install http 0.3
 luarocks install lua_system_constants 0.1.3
 luarocks install lyaml 6.0-1 YAML_DIR=$HOME/yaml # 6.2.3-1 Error: Build error: Failed building.
 luarocks install lua-resty-iputils 0.3.0
-luarocks install luaossl 20181207
+luarocks install luaossl 20181207 CRYPTO_DIR=$HOME/openssl OPENSSL_DIR=$HOME/openssl
 luarocks install luasyslog 1.0.0
 luarocks install lua_pack 1.0.5
 luarocks install lua-resty-dns-client 3.0.2
