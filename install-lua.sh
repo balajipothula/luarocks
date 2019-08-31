@@ -11,7 +11,7 @@ sudo yum -y update
 sudo yum -y install gcc git libyaml make openssl-devel readline-devel unixODBC-devel unzip
 
 # downloading, extracting and compiling lua.
-curl http://www.lua.org/ftp/lua-5.1.1.tar.gz -o $HOME/lua.tar.gz                    && \
+curl -JL http://www.lua.org/ftp/lua-5.1.1.tar.gz -o $HOME/lua.tar.gz                && \
 tar -xzf $HOME/lua.tar.gz -C $HOME                                                  && \
 rm  -rf  $HOME/lua.tar.gz                                                           && \
 mv       $HOME/lua-* $HOME/lua                                                      && \
