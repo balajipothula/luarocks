@@ -10,7 +10,7 @@ sudo yum -y update
 # installing build essentials.
 sudo yum -y install gcc make perl readline-devel zlib zlib-devel
 
-# downloading, extracting and compiling openssl.
+# downloading, extracting and compiling yaml.
 curl -JL http://pyyaml.org/download/libyaml/yaml-0.1.5.tar.gz -o $HOME/yaml.tar.gz && \
 tar -xzf $HOME/yaml.tar.gz -C $HOME                                                && \
 rm  -rf  $HOME/yaml.tar.gz                                                         && \
