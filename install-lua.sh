@@ -8,7 +8,7 @@
 sudo yum -y update
 
 # installing build essentials.
-sudo yum -y install gcc make readline-devel
+sudo yum -y install gcc git make readline-devel
 
 # lua downloading, extracting and compiling.
 curl -JL http://www.lua.org/ftp/lua-5.1.1.tar.gz -o $HOME/lua.tar.gz                && \
