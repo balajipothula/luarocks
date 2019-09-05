@@ -17,6 +17,7 @@ rm  -rf  $HOME/unzip.tar.gz                                                     
 mv       $HOME/unzip* $HOME/UnZip                                                 && \
 cd       $HOME/UnZip                                                              && \
 make prefix=$HOME/unzip -f unix/Makefile generic install                          && \
+cd       $HOME                                                                    && \
 rm  -rf  $HOME/UnZip                                                              && \
 rm  -rf  $HOME/unzip/man                                                          && \
 echo "export PATH=$PATH:$HOME/unzip/bin" >> $HOME/.bashrc                         && \
