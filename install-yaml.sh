@@ -15,7 +15,6 @@ curl -JL http://pyyaml.org/download/libyaml/yaml-0.1.5.tar.gz -o $HOME/yaml.tar.
 tar -xzf $HOME/yaml.tar.gz -C $HOME                                                && \
 rm  -rf  $HOME/yaml.tar.gz                                                         && \
 mv       $HOME/yaml-* $HOME/YAML                                                   && \
-mkdir -p $HOME/yaml                                                                && \
 cd       $HOME/YAML                                                                && \
 ./configure --prefix=$HOME/yaml                                                    && \
 make install                                                                       && \
