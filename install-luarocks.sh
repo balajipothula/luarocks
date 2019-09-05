@@ -14,8 +14,8 @@ sudo yum -y install gcc git libyaml make openssl-devel readline-devel unixODBC-d
 curl -J -L https://luarocks.org/releases/luarocks-3.1.3.tar.gz -o $HOME/luarocks.tar.gz && \
 tar -xzf $HOME/luarocks.tar.gz -C $HOME                                                 && \
 rm  -rf  $HOME/luarocks.tar.gz                                                          && \
-mv       $HOME/luarocks-* $HOME/luarocks                                                && \
-cd       $HOME/luarocks                                                                 && \
+mv       $HOME/luarocks-* $HOME/LuaRocks                                                && \
+cd       $HOME/LuaRocks                                                                 && \
 ./configure --prefix="$HOME/luarocks"                                                      \
             --lua-version="5.1"                                                            \
             --with-lua-bin="$HOME/lua/bin"                                                 \
@@ -24,6 +24,7 @@ cd       $HOME/luarocks                                                         
             --with-lua-interpreter="lua"                                                && \
 make build install                                                                      && \
 cd       $HOME                                                                          && \
+rm  -rf  $HOME/LuaRocks                                                                 && \
 echo "export PATH=$PATH:$HOME/luarocks/bin" >> $HOME/.bashrc                            && \
 exec $BASH                                                                              && \
 luarocks path >> $HOME/.bashrc                                                          && \
