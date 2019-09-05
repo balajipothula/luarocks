@@ -3,15 +3,16 @@
 step-01: ./install-lua.sh  
 step-02: ./install-unzip.sh  
 step-03: ./install-luarocks.sh  
-step-04: ./install-openssl.sh  
-step-05: ./install-yaml.sh  
-step-06: ./install-kong-dependency-bundles.sh  
+step-04: ./install-zlib.sh  
+step-05: ./install-openssl.sh  
+step-06: ./install-yaml.sh  
+step-07: ./install-kong-dependency-bundles.sh  
 
 listing luarocks installed packages.  
-step-07: luarocks list --porcelain  
+step-08: luarocks list --porcelain  
 
 listing luarocks c libraries.  
 step-08: ls $HOME/luarocks/lib/lua/5.1  
 
 listing luarocks lua libraries.  
-step-09: ls $HOME/luarocks/share/lua/5.1  
+step-10: ls $HOME/luarocks/share/lua/5.1  
