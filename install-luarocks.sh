@@ -8,7 +8,7 @@
 sudo yum -y update
 
 # installing build essentials.
-sudo yum -y install gcc make readline-devel
+sudo yum -y install gcc git make readline-devel
 
 # downloading, extracting and compiling luarocks.
 curl -J -L https://luarocks.org/releases/luarocks-3.1.3.tar.gz -o $HOME/luarocks.tar.gz && \
