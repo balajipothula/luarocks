@@ -15,7 +15,6 @@ curl -JL https://zlib.net/zlib-1.2.11.tar.gz -o $HOME/zlib.tar.gz && \
 tar -xzf $HOME/zlib.tar.gz -C $HOME                               && \
 rm  -rf  $HOME/zlib.tar.gz                                        && \
 mv       $HOME/zlib-* $HOME/zlibsrc                               && \
-mkdir -p $HOME/zlib                                               && \
 cd       $HOME/zlibsrc                                            && \
 ./configure --prefix=$HOME/zlib                                   && \
 make install                                                      && \
@@ -27,7 +26,6 @@ curl -JL https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.gz -o $HOME/pcre.tar.gz && 
 tar -xzf $HOME/pcre.tar.gz -C $HOME                                          && \
 rm  -rf  $HOME/pcre.tar.gz                                                   && \
 mv       $HOME/pcre-* $HOME/pcresrc                                          && \
-mkdir -p $HOME/pcre                                                          && \
 cd       $HOME/pcresrc                                                       && \
 ./configure --prefix=$HOME/pcre                                              && \
 make install                                                                 && \
@@ -39,20 +37,17 @@ curl -JL https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.6.1.tar.gz -o $
 tar -xzf $HOME/libressl.tar.gz -C $HOME                                                              && \
 rm  -rf  $HOME/libressl.tar.gz                                                                       && \
 mv       $HOME/libressl-* $HOME/libresslsrc                                                          && \
-mkdir -p $HOME/libressl                                                                              && \
 cd       $HOME/libresslsrc                                                                           && \
 ./configure --prefix=$HOME/libressl                                                                  && \
 make install                                                                                         && \
 cd       $HOME                                                                                       && \
 rm  -rf  $HOME/libresslsrc
 
-
 # nginx downloading, extracting and compiling.
 curl -JL http://nginx.org/download/nginx-1.12.1.tar.gz -o $HOME/nginx.tar.gz && \
 tar -xzf $HOME/nginx.tar.gz -C $HOME                                         && \
 rm  -rf  $HOME/nginx.tar.gz                                                  && \
 mv       $HOME/nginx-* $HOME/nginxsrc                                        && \
-mkdir -p $HOME/nginx                                                         && \
 cd       $HOME/nginxsrc                                                      && \
 ./configure --prefix=$HOME/nginx                                                \
             --without-http_scgi_module                                          \
