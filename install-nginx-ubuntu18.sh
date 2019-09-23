@@ -8,7 +8,7 @@
 sudo apt -y update
 
 # build essentials installing.
-sudo apt -y install gcc gcc-c++ glibc-devel make autoconf automake
+sudo apt -y install build-essential gcc g++ make autoconf automake
 
 # zlib downloading and extracting.
 curl -JL https://zlib.net/zlib-1.2.11.tar.gz -o $HOME/zlib.tar.gz && \
