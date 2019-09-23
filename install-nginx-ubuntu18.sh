@@ -41,6 +41,7 @@ cd        $HOME/nginxsrc                                                       &
             --http-log-path=$HOME/nginx/log/access.log                            \
             --pid-path=$HOME/nginx/log/nginx.pid                                  \
             --lock-path=$HOME/nginx/log/nginx.lock                                \
+            --with-cpu-opt='generic'                                              \
             --with-cc-opt='-static -static-libgcc'                                \
             --with-ld-opt='-lrt -static'                                          \
             --with-pcre=$HOME/pcresrc                                             \
