@@ -45,4 +45,6 @@ cd        $HOME/nginxsrc                                                       &
             --with-pcre-jit                                                       \
             --with-zlib=$HOME/zlibsrc                                             \
             --with-openssl=$HOME/libresslsrc                                      \
-            --with-http_ssl_module
+            --with-http_ssl_module                                             && \
+make                                                                           && \
+make install
