@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Author      : BALAJI POTHULA <balaji.pothula@techie.com>,
-# Date        : 02 May 2020,
-# Description : Installing / Compiling NGINX from Source Code.
+# Date        : 25 May 2020,
+# Description : Installing / Compiling Lua from Source Code.
 
 # exit immediately if a command exits with a non-zero exit status.
 set -e
