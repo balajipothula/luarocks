@@ -27,10 +27,11 @@ sudo apt -y install autoconf        \
                     make
 
 # lua downloading, extracting and compiling.
+#                                    5.2.4
 curl -JL https://www.lua.org/ftp/lua-5.3.5.tar.gz -o lua.tar.gz                       && \
 tar  -xf $HOME/lua.tar.gz -C $HOME                                                    && \
 rm   -rf $HOME/lua.tar.gz                                                             && \
 mv       $HOME/lua-* $HOME/luasrc                                                     && \
 sed -i 's/INSTALL_TOP= \/usr\/local/INSTALL_TOP= ${HOME}\/lua/' $HOME/luasrc/Makefile && \
 cd       $HOME/luasrc                                                                 && \
-make linux test
+make linux install
