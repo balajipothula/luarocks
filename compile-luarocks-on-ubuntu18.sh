@@ -24,6 +24,7 @@ sudo apt -y install autoconf        \
                     gcc             \
                     git             \
                     libreadline-dev \
+                    libssl-dev      \
                     make            \
                     unzip
 
