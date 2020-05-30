@@ -41,3 +41,11 @@ cd       $HOME/luarockssrc                                                      
             --with-lua-lib="$HOME/lua/lib"                                               \
             --with-lua-interpreter="lua"                                              && \
 make build install
+
+<<COMMENT
+./configure --prefix=$HOME/luarocks                                                      \
+            --with-lua=$HOME/luajit                                                      \
+            --lua-suffix=jit                                                             \
+            --with-lua-include=$HOME/luajit/include/luajit-2.1                        && \
+make build install
+COMMENT
