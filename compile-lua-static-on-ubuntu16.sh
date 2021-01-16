@@ -24,8 +24,8 @@ sudo apt -y install autoconf        \
                     gcc             \
                     git             \
                     libreadline-dev \
-                    make
-
+                    make            \
+                    musl-tools
 
 # lua downloading, extracting and compiling.
 # make posix CC="musl-gcc -static"
@@ -33,7 +33,7 @@ curl -JL http://www.lua.org/ftp/lua-5.4.2.tar.gz -o $HOME/luasrc.tar.gz         
 tar  -xf $HOME/luasrc.tar.gz -C $HOME                                                 && \
 rm   -rf $HOME/luasrc.tar.gz                                                          && \
 mv       $HOME/lua-* $HOME/luasrc                                                     && \
-sed -i 's/INSTALL_TOP= \/usr\/local/INSTALL_TOP= ${HOME}\/lua/' $HOME/luasrc/Makefile && \
+sed -i 's|INSTALL_TOP= \/usr\/local|INSTALL_TOP= ${HOME}\/lua|' $HOME/luasrc/Makefile && \
 cd       $HOME/luasrc                                                                 && \
 make posix CC="gcc -static"                                                           && \
 make linux install                                                                    && \
