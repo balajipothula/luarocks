@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Author      : BALAJI POTHULA <balaji.pothula@techie.com>,
-# Date        : 25 May 2020,
+# Date        : 16 January 2021,
 # Description : Installing / Compiling LuaJIT from Source Code.
 
 # exit immediately if a command exits with a non-zero exit status.
