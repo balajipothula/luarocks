@@ -1,10 +1,8 @@
 #!/bin/bash
 
 # Author      : BALAJI POTHULA <balaji.pothula@techie.com>,
-# Date        : 12 August 2019,
-# Description : Installing / Compiling NGINX from Source Code.
-
-
+# Date        : 17 January 2021,
+# Description : Installing / Compiling PURE STATIC NGINX from Source Code.
 
 # exit immediately if a command exits with a non-zero exit status.
 set -e
