@@ -4,11 +4,27 @@
 # Date        : 12 August 2019,
 # Description : Installing / Compiling NGINX from Source Code.
 
+
+
+# exit immediately if a command exits with a non-zero exit status.
+set -e
+
+# debugging shell script.
+set -x
+
 # update package repositories.
 sudo apt -y update
 
+# upgrading packages.
+sudo apt -y upgrade
+
 # build essentials installing.
-sudo apt -y install build-essential gcc g++ make autoconf automake
+sudo apt -y install build-essential \
+                    gcc             \
+                    g++             \
+                    make            \
+                    autoconf        \
+                    automake
 
 # zlib downloading and extracting.
 curl -JL https://zlib.net/zlib-1.2.11.tar.gz -o $HOME/zlib.tar.gz && \
